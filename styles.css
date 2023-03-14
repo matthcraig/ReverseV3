@@ -4,3 +4,13 @@
 .boring-btn {
     margin: 2em 0 0 0
 }
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.walrus-showing {
+    display: none;
+}
