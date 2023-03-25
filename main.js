@@ -26,8 +26,8 @@ function reverseV3(string) {
 
 $(document).ready(function() {
     $(".clickable").click(function() {
-      $("#walrus-showing").slideToggle();
-      $("#walrus-hidden").slideToggle();
+      $("#walrus-showing").toggle("slow");
+      $("#walrus-hidden").toggle("slow");
     });
   
     $(".clickable-text").click(function() {
