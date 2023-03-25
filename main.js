@@ -24,13 +24,17 @@ function reverseV3(string) {
     return newString
 }
 
-
 $(document).ready(function() {
-    $(".walrus-showing").click(function() {
-        console.log('hello')
-        $(".hidden").toggle();
-    })
-})
+    $(".clickable").click(function() {
+      $("#walrus-showing").slideToggle();
+      $("#walrus-hidden").slideToggle();
+    });
+  
+    $(".clickable-text").click(function() {
+        $(".text-hidden").toggle();
+        $(".text-showing").toggle();
+    });
+  });
 
 //clear click
 $(document).ready(function() {
