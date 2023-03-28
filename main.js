@@ -51,9 +51,6 @@ $(document).ready(function() {
     })
 })
 
-
-
-
 //create a new function here to map or loop through an array of objects
 
 $(document).ready(function() {
@@ -107,20 +104,14 @@ function objectMapping() {
 ];
 //map it
 
+
+document.querySelector('thead').insertAdjacentHTML('afterend',
+  `<table><thead><tr><th>
+   ${Object.keys(axiosResponse[0]).join('<th>')}
+  </thead><tbody><tr><td>${axiosResponse.map(e=>Object.values(e)
+.join('<td>')).join('<tr><td>')}</table>`)
+
 axiosResponse.map(item => { console.log(item.fname)})
 
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
