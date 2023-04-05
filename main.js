@@ -23,7 +23,7 @@ function reverseV3(string) {
 }
 $(document).ready(function() {
     $(".clickable").click(function() {
-      $("#walrus-showing").toggle("slow");
+      $("#walrus-picture").toggle("slow");
       $("#walrus-hidden").toggle("slow");
     });
   
@@ -52,10 +52,25 @@ $(document).ready(function() {
 })
 
 //create a new function here to map or loop through an array of objects
-
 $(document).ready(function() {
+    $("#clearItems").click(function(event) {
+        $("tr").empty();
+        $("td").empty();
+        event.preventDefault();
+        counter = 0;
+        console.log('empty', counter);
+    })
+})
+let counter = 0
+$(document).ready(function() {
+    console.log('append 1', counter)
     $("#mapping").click(function(event) {
+        if(counter === 0) {
         $("#mapResults").append(objectMapping());
+        counter++
+        }
+        console.log('append 2', counter)
+        //$("#mapping").disable();
         event.preventDefault();
     })
 })
@@ -102,15 +117,14 @@ function objectMapping() {
         "syncGuid": "67b98d7d-a075df-459b-y54a-82750b21dafq"
     }
 ];
-//map it
 
+//map it
 
 document.querySelector('thead').insertAdjacentHTML('afterend',
   `<table><thead><tr><th>
    ${Object.keys(axiosResponse[0]).join('<th>')}
   </thead><tbody><tr><td>${axiosResponse.map(e=>Object.values(e)
 .join('<td>')).join('<tr><td>')}</table>`)
-
 axiosResponse.map(item => { console.log(item.fname)})
 
 
