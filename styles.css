@@ -41,7 +41,13 @@ img {
     width: 100%;
   }
   
+  td:hover {
+    background-color:red;
+    transition: .5s;
+    transition-timing-function: ease;
+  }
   td, th {
+    transition: .5s;
     border: 1px solid #3d4439;
     text-align: left;
     padding: 8px;
@@ -50,6 +56,9 @@ img {
   tr:nth-child(even) {
     background-color: #c5beec;
   }
+  /* tr:nth-child(even):hover {
+    background-color: red;
+  } */
 
 
   body {
